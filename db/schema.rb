@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180308063849) do
+ActiveRecord::Schema.define(version: 20180310105202) do
+
+  create_table "points", force: :cascade do |t|
+    t.integer "used_point"
+    t.integer "point_left"
+    t.date "data_date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "user_id"
+    t.index ["user_id"], name: "index_points_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "name"

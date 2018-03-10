@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Used point:</strong>
+  <%= @point.used_point %>
+</p>
+
+<p>
+  <strong>Point left:</strong>
+  <%= @point.point_left %>
+</p>
+
+<p>
+  <strong>Data date:</strong>
+  <%= @point.data_date %>
+</p>
+
+<%= link_to 'Edit', edit_point_path(@point) %> |
+<%= link_to 'Back', points_path %>
