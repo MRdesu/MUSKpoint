@@ -20,7 +20,7 @@
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'User list', users_path %>
-<%= link_to 'Point使用', point_path(@user) %>
+<%= link_to 'Point使用', "/points/new" %>
 <% if logged_in? %>
   <%= link_to 'Logout', logout_path, method: :delete %>
 <% end %>

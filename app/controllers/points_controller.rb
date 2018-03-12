@@ -11,7 +11,7 @@ class PointsController < ApplicationController
   # GET /points/1.json
   def show
     @user = User.find(params[:id])
-    @points = @user.points.find(params[:id])
+    @points = @user.points.find(params[:user_id])
   end
 
   # GET /points/new
